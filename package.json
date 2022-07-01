@@ -25,6 +25,8 @@
     "@types/aws-lambda": "^8.10.100",
     "@types/axios": "^0.14.0",
     "@types/cheerio": "^0.22.31",
+    "@types/jest": "^28.1.4",
+    "@types/node": "^18.0.0",
     "babel-jest": "^28.1.1",
     "jest": "^28.1.1",
     "prettier": "^2.6.2",
@@ -35,6 +37,8 @@
     "uuid": "^8.3.2"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.12",
     "tslib": "^2.4.0"
   }
 }
