@@ -2,7 +2,7 @@
   "name": "cambridge-dictionary-service",
   "version": "1.0.0",
   "description": "cambridge dictionary service",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
     "test": "jest",
     "code-format": "prettier --write src/**/*.ts",
@@ -37,6 +37,7 @@
     "uuid": "^8.3.2"
   },
   "dependencies": {
+    "@google-cloud/functions-framework": "^3.1.2",
     "axios": "^0.27.2",
     "cheerio": "^1.0.0-rc.12",
     "tslib": "^2.4.0"
