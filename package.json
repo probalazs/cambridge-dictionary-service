@@ -2,7 +2,7 @@
   "name": "cambridge-dictionary-service",
   "version": "1.0.0",
   "description": "cambridge dictionary service",
-  "main": "dist/main.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest",
     "code-format": "prettier --write src/**/*.ts",
