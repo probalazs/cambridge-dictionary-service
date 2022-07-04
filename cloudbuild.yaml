@@ -1,0 +1,20 @@
+steps:
+  - name: node:16
+    entrypoint: npm
+    args: ['ci']
+  - name: node:16
+    entrypoint: npm
+    args: ['test']
+  - name: node:16
+    entrypoint: npm
+    args: ['run', 'build']
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - cambridge-dictionary-service
+      - --region=europe-west3
+      - --source=dist
+      - --trigger-http
+      - --runtime=nodejs16
