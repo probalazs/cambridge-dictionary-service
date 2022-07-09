@@ -20,4 +20,3 @@ steps:
       - --runtime=nodejs16
       - --allow-unauthenticated
       - --entry-point=main
-      - --set-env-vars WORD_ENDPOINT='https://dictionary.cambridge.org/dictionary/english'

@@ -6,11 +6,10 @@
   "scripts": {
     "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "jest src",
-    "test:e2e": "concurrently -s \"second\" -k 'npm run test:e2e:http-server' 'env-cmd -e test jest e2e'",
-    "test:e2e:http-server": "http-server e2e/static -p 3002 -s",
+    "test:e2e": "jest e2e",
     "code-format": "prettier --write src/**/*.ts",
     "build": "rimraf dist && tsc --project tsconfig.json && copyfiles package.json package-lock.json dist/",
-    "start": "env-cmd -e development functions-framework --target=main --source=dist --port=3000"
+    "start": "npm run build && functions-framework --target=main --source=dist --port=3000"
   },
   "repository": {
     "type": "git",
@@ -34,9 +33,8 @@
     "babel-jest": "^28.1.1",
     "concurrently": "^7.2.2",
     "copyfiles": "^2.4.1",
-    "env-cmd": "^10.1.0",
-    "http-server": "^14.1.1",
     "jest": "^28.1.1",
+    "nock": "^13.2.8",
     "prettier": "^2.6.2",
     "prettier-config-standard": "^5.0.0",
     "rimraf": "^3.0.2",
