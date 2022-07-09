@@ -1,5 +1,6 @@
+import { env } from 'process';
 import { Configuration } from './interfaces';
 
 export const configuration: Configuration = {
-  wordEndpoint: 'https://dictionary.cambridge.org/dictionary/english',
+  wordEndpoint: env['WORD_ENPOINT']!,
 };
