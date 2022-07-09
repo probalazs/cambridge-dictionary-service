@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "jest src",
-    "test:e2e": "concurrently -k 'npm run test:e2e:http-server' 'env-cmd -e test jest e2e'",
+    "test:e2e": "concurrently -s \"second\" -k 'npm run test:e2e:http-server' 'env-cmd -e test jest e2e'",
     "test:e2e:http-server": "http-server e2e/static -p 3002 -s",
     "code-format": "prettier --write src/**/*.ts",
     "build": "rimraf dist && tsc --project tsconfig.json && copyfiles package.json package-lock.json dist/",
