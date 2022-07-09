@@ -7,4 +7,4 @@ import { Main } from './interfaces';
 export const main: Main = (request, response) =>
   find({
     getHtml: getHtml({ get: axios.get, baseUrl: configuration.wordEndpoint }),
-  })(request.query['q']! as string).then(response.json);
+  })(request.query['q']! as string).then((_) => response.json(_));
