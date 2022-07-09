@@ -19,3 +19,4 @@ steps:
       - --trigger-http
       - --runtime=nodejs16
       - --allow-unauthenticated
+      - --entry-point=main

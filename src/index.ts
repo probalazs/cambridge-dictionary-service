@@ -10,8 +10,6 @@
 //   })(request.query['q']! as string).then(response.json),
 // );
 
-import { http } from '@google-cloud/functions-framework';
-
-http('main', (_, response) => {
+export const main: any = (_: any, response: any) => {
   response.json({ message: 'Hellow Word!' });
-});
+};
