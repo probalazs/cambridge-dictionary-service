@@ -1,3 +1,7 @@
+import { Request, Response } from '@google-cloud/functions-framework';
+
+export type Main = (request: Request, response: Response) => Promise<any>;
+
 export type Configuration = {
   wordEndpoint: string;
 };
