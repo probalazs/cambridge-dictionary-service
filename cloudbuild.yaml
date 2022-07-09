@@ -18,3 +18,4 @@ steps:
       - --source=dist
       - --trigger-http
       - --runtime=nodejs16
+      - --allow-unauthenticated
